@@ -46,41 +46,39 @@ const Landing = () => {
               </div>
             </div>
 
-            <div className="col-lg-5 text-center">
-              <div className="bg-white text-dark p-4 rounded-4 shadow-lg text-start">
-                <h5 className="fw-bold text-primary border-bottom pb-2 mb-3">
-                  <i className="bi bi-key-fill me-2"></i> Quick Demo Access
-                </h5>
-                <p className="small text-muted mb-3">
-                  For college review & viva presentation, use these pre-seeded demo accounts:
-                </p>
-                <div className="vstack gap-2 small">
-                  <div className="p-2 border rounded bg-light d-flex justify-content-between align-items-center">
-                    <div>
-                      <span className="badge bg-danger me-2">Admin</span>
-                      <strong className="font-monospace">admin@campus.com</strong>
-                    </div>
-                    <code className="text-secondary">Admin@123</code>
+            <div className="col-lg-5">
+              <div className="bg-white text-dark p-4 rounded-4 shadow-lg">
+                <div className="d-flex align-items-center gap-3 mb-3 border-bottom pb-3">
+                  <div className="bg-primary bg-opacity-10 text-primary p-3 rounded-circle">
+                    <i className="bi bi-building-check fs-3"></i>
                   </div>
-                  <div className="p-2 border rounded bg-light d-flex justify-content-between align-items-center">
-                    <div>
-                      <span className="badge bg-primary me-2">Staff</span>
-                      <strong className="font-monospace">staff@campus.com</strong>
-                    </div>
-                    <code className="text-secondary">Staff@123</code>
-                  </div>
-                  <div className="p-2 border rounded bg-light d-flex justify-content-between align-items-center">
-                    <div>
-                      <span className="badge bg-success me-2">Student</span>
-                      <strong className="font-monospace">student@campus.com</strong>
-                    </div>
-                    <code className="text-secondary">Student@123</code>
+                  <div>
+                    <h5 className="fw-bold mb-0 text-primary">Campus Facility Care</h5>
+                    <small className="text-muted">Centralized Grievance Cell</small>
                   </div>
                 </div>
-                <div className="mt-3 text-center">
-                  <Link to="/login" className="btn btn-outline-primary btn-sm w-100 fw-bold">
-                    Go to Login Page
-                  </Link>
+                <div className="vstack gap-3 small">
+                  <div className="d-flex align-items-center gap-3 p-2 bg-light rounded-3">
+                    <i className="bi bi-shield-check text-success fs-4"></i>
+                    <div>
+                      <strong className="d-block text-dark">Verified Redressal</strong>
+                      <span className="text-muted">Tickets logged with unique audit tracking</span>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-3 p-2 bg-light rounded-3">
+                    <i className="bi bi-stopwatch text-warning fs-4"></i>
+                    <div>
+                      <strong className="d-block text-dark">Priority-Based SLA</strong>
+                      <span className="text-muted">Critical safety & facility issues prioritized</span>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-3 p-2 bg-light rounded-3">
+                    <i className="bi bi-chat-left-text text-primary fs-4"></i>
+                    <div>
+                      <strong className="d-block text-dark">Direct Communication</strong>
+                      <span className="text-muted">Live remarks between students & officers</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
