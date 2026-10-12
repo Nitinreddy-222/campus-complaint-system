@@ -30,11 +30,14 @@ api.interceptors.response.use(
   },
   (error) => {
     if (error.response && error.response.status === 401) {
-      // If token expired or unauthorized, clear storage if on protected flow
-      if (localStorage.getItem('token')) {
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        window.location.href = '/login?expired=true';
+      const currentPath = window.location.pathname;
+      // Only clear and redirect if on a protected page, not on login or register
+      if (currentPath !== '/login' && currentPath !== '/register') {
+        if (localStorage.getItem('token')) {
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          window.location.href = '/login?expired=true';
+        }
       }
     }
     return Promise.reject(error);
