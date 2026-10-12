@@ -37,6 +37,17 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Welcome and status route at root
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Campus Complaint & Issue Tracking System Backend API is active',
+    clientUrl: process.env.CLIENT_URL || 'http://localhost:5173',
+    info: 'To view the application UI, open http://localhost:5173 in your browser',
+    healthCheck: '/api/health'
+  });
+});
+
 // Health check route
 app.get('/api/health', (req, res) => {
   res.status(200).json({
